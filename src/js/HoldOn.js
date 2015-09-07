@@ -25,6 +25,9 @@
                 }
                 
                 switch(theme){
+                    case "custom":
+                        content = '<div style="text-align: center;">' + properties.content + "</div>";
+                    break;
                     case "sk-dot":
                         content = '<div class="sk-dot"> <div class="sk-dot1"></div> <div class="sk-dot2"></div> </div>';
                     break;
@@ -63,6 +66,16 @@
                                 </div>';
                 
                 $(Holder).appendTo('body').fadeIn(300);
+                
+                if(properties){
+                    if(properties.backgroundColor){
+                        $("#holdon-overlay").css("backgroundColor",properties.backgroundColor);
+                    }
+                    
+                    if(properties.backgroundColor){
+                        $("#holdon-message").css("color",properties.textColor);
+                    }
+                }
             };
             
             HoldOn.close = function(){
