@@ -58,16 +58,21 @@
                     break;
                 }
                 
-                var Holder    = '<div id="holdon-overlay" style="display: none;">\n\
+                var Holder    = '<div id="holdon-overlay">\n\
                                     <div id="holdon-content-container">\n\
                                         <div id="holdon-content">'+content+'</div>\n\
                                         <div id="holdon-message">'+message+'</div>\n\
                                     </div>\n\
                                 </div>';
-                
-                $(Holder).appendTo('body').fadeIn(300);
+                //no body append just a part of loading 
+                $(properties.el).appendTo(Holder).fadeIn(300);
                 
                 if(properties){
+                    //custom css style setting (object)
+                    if(properties.style){
+                        $("#holdon-overlay").css(properties.style);
+                    }
+
                     if(properties.backgroundColor){
                         $("#holdon-overlay").css("backgroundColor",properties.backgroundColor);
                     }
