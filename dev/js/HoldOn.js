@@ -18,8 +18,6 @@
              * @returns {undefined}
              */
             _holdon.open = function(properties){
-                _holdon.close();
-                
                 var theme = "sk-rect";
                 var content = "";
                 var message = "";
@@ -42,6 +40,10 @@
                                         <div id="holdon-message">'+message+'</div>\n\
                                     </div>\n\
                                 </div>';
+                
+                // Remove protection and overlay before add the new one
+                clearInterval(_settings.instanceProtection);
+                $("#holdon-overlay").remove();
                 
                 $(Holder).appendTo('body').fadeIn(300);
                 
