@@ -18,9 +18,8 @@
              * @returns {undefined}
              */
             _holdon.open = function(properties){
-                clearInterval(_settings.instanceProtection);// Remove any previous protection listener
+                _holdon.close();
                 
-                $('#holdon-overlay').remove();//RemoveIfCalledBefore
                 var theme = "sk-rect";
                 var content = "";
                 var message = "";
@@ -67,15 +66,19 @@
              * @returns {undefined}
              */
             _holdon.close = function(){
-                clearInterval(_settings.instanceProtection);
+                if(document.getElementById('holdon-overlay')){
+                    clearInterval(_settings.instanceProtection);
+
+                    $('#holdon-overlay').fadeOut(300, function(){
+                        $(this).remove();
+                    });
+
+                    _settings.instanceProtection = null;
+
+                    return true;
+                }
                 
-                $('#holdon-overlay').fadeOut(300, function(){
-                    $(this).remove();
-                });
-                
-                _settings.instanceProtection = null;
-                
-                return true;
+                return false;
             };
             
             
