@@ -49,6 +49,7 @@
 
 .sk-rect > div {
   background-color: #333;
+  background-color: var(--iconColor);
   height: 100%;
   width: 6px;
   display: inline-block;
@@ -104,6 +105,7 @@
 
 .sk-cube1, .sk-cube2 {
   background-color: #333;
+  background-color: var(--iconColor);
   width: 15px;
   height: 15px;
   position: absolute;
@@ -167,6 +169,7 @@
   position: absolute;
   top: 0;
   background-color: #333;
+  background-color: var(--iconColor);
   border-radius: 100%;
   
   -webkit-animation: sk-dot-bounce 2.0s infinite ease-in-out;
@@ -211,6 +214,7 @@
   width: 18px;
   height: 18px;
   background-color: #333;
+  background-color: var(--iconColor);
 
   border-radius: 100%;
   display: inline-block;
@@ -267,6 +271,7 @@
   width: 15%;
   height: 15%;
   background-color: #333;
+  background-color: var(--iconColor);
   border-radius: 100%;
   -webkit-animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;
           animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;
@@ -384,6 +389,7 @@
   width: 33%;
   height: 33%;
   background-color: #333;
+  background-color: var(--iconColor);
   float: left;
   -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
           animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; 
@@ -466,6 +472,7 @@
   width: 100%;
   height: 100%;
   background-color: #333;
+  background-color: var(--iconColor);
   -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
           animation: sk-foldCubeAngle 2.4s infinite linear both;
   -webkit-transform-origin: 100% 100%;
@@ -553,6 +560,7 @@
   width: 15%;
   height: 15%;
   background-color: #333;
+  background-color: var(--iconColor);
   border-radius: 100%;
   -webkit-animation: sk-circleFadeDelay 1.2s infinite ease-in-out both;
           animation: sk-circleFadeDelay 1.2s infinite ease-in-out both;
